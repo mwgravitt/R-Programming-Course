@@ -1,0 +1,16 @@
+{
+    "contents" : "\n## run runall.R to exercise the functions from the course\n\nClone a copy of the repository\nPull the contents \nSet working directory to the root of the repository\nExecute: source('runall.R', echo=TRUE)",
+    "created" : 1425841062115.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1927280729",
+    "id" : "693F1563",
+    "lastKnownWriteTime" : 1425841208,
+    "path" : "~/Coursera/R Programming Course/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "markdown"
+}
