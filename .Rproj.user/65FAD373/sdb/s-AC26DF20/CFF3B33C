@@ -1,0 +1,16 @@
+{
+    "contents" : "best <- function(inState, condition) {\n  \n  ## Read outcome data\n  outcome <-read.csv(\"outcome-of-care-measures.csv\", colClasses=\"character\")\n  names(outcome)[11] <- \"heart.attack\"\n  outcome$heart.attack <- suppressWarnings(as.numeric (outcome$heart.attack))\n  names(outcome)[17] <- \"heart.failure\"\n  outcome$heart.failure <- suppressWarnings(as.numeric (outcome$heart.failure))\n  names(outcome)[23] <- \"pneumonia\"\n  outcome$pneumonia <- suppressWarnings(as.numeric (outcome$pneumonia))\n    \n  ## Check that state and outcome are valid\n  validConditions = c('heart attack','heart failure','pneumonia')\n  if (!condition %in% validConditions) {\n    stop (\"invalid outcome\")  \n  }\n  \n  validStates = unique (outcome$State)\n  if (!inState %in% validStates) {\n    stop (\"invalid state\")  \n  }\n  \n  hospitals <- subset(outcome, State == inState)\n  \n  if (condition == \"heart attack\") {\n    sorted <- hospitals[order(hospitals$heart.attack, hospitals$Hospital.Name),]\n  }\n  else if (condition == \"heart failure\") {\n    sorted <- hospitals[order(hospitals$heart.attack, hospitals$Hospital.Name),]\n  }\n  else {\n    sorted <- hospitals[order(hospitals$heart.attack, hospitals$Hospital.Name),]\n  }\n  \n  return (sorted[1,]$Hospital.Name)\n}",
+    "created" : 1425839944581.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "212628576",
+    "id" : "CFF3B33C",
+    "lastKnownWriteTime" : 1425825439,
+    "path" : "~/Coursera/R Programming Course/best.R",
+    "project_path" : "best.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

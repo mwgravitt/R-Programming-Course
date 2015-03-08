@@ -1,0 +1,17 @@
+{
+    "contents" : "\nsource (\"rankhospital.R\") \nsource (\"rankall.R\")\nsource (\"cachematrix.R\")\nsource (\"pollutantmean.R\")\nsource (\"complete.R\")\nsource (\"corr.R\")\nsource (\"best.R\")\n\n# operations to run pollutantmean.R\npollutantmean(\"specdata\", \"sulfate\", 1:10)\npollutantmean(\"specdata\", \"nitrate\", 70:72)\npollutantmean(\"specdata\", \"nitrate\", 23)\n\n# operations to run complete.R\ncomplete(\"specdata\", 1)\ncomplete(\"specdata\", c(2, 4, 8, 10, 12))\ncomplete(\"specdata\", 30:25)\ncomplete(\"specdata\", 3)\n\n# operations to run corr.R \ncr <- corr(\"specdata\", 150)\nhead(cr)\nsummary(cr)\ncr <- corr(\"specdata\", 400)\nhead(cr)\nsummary(cr)\ncr <- corr(\"specdata\", 5000)\nsummary(cr)\nlength(cr)\ncr <- corr(\"specdata\")\nsummary(cr)\nlength(cr)\n\n# operations to run exercise 3\nbest(\"TX\", \"heart attack\")\nbest(\"TX\", \"heart failure\")\nbest(\"MD\", \"heart attack\")\nbest(\"MD\", \"pneumonia\")\n#best(\"BB\", \"heart attack\")\n#best(\"NY\", \"hert attack\")\n\nrankhospital(\"TX\", \"heart failure\", 4)\nrankhospital(\"MD\", \"heart attack\", \"worst\")\nrankhospital(\"MN\", \"heart attack\", 5000)\n\nhead(rankall(\"heart attack\", 20), 10)\ntail(rankall(\"pneumonia\", \"worst\"), 3)\ntail(rankall(\"heart failure\"), 10)\n\n\n\n\n\n\n",
+    "created" : 1425840044850.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3379429229",
+    "id" : "69C0AFB6",
+    "lastKnownWriteTime" : 1425840685,
+    "path" : "~/Coursera/R Programming Course/runall.R",
+    "project_path" : "runall.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
